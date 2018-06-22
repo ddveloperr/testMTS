@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">testMTS</string>
+    <string name="save_message">Сохранено: %s</string>
+    <string name="enter_data_dialog">Введите данные</string>
+    <string name="date_promt_dialog">Дата</string>
+    <string name="date_hint_dialog">01.02.2002</string>
+    <string name="weight_promt_dialog">Вес</string>
+    <string name="weight_hint_dialog">400кг</string>
+    <string name="fat_promt_dialog">Жир</string>
+    <string name="fat_hint_dialog">30</string>
+    <string name="confirm_dialog">Подтвердить</string>
+    <string name="name">Имя</string>
+    <string name="birth_date">Дата рожд.</string>
+    <string name="mother">Мать</string>
+    <string name="father">Отец</string>
+    <string name="breed">Порода</string>
+    <string name="color">Масть</string>
+    <string name="enter_data">Добавить данные</string>
+    <string name="save">Сохранить</string>
+    <string name="age_short">Вз</string>
+    <string name="invalid_input">Некорректный ввод</string>
+</resources>

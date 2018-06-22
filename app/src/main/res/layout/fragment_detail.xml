@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textSize="26sp"
+                    android:textColor="#000000"
+                    android:id="@+id/nameTextPromt"/>
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameEditText"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/nameTextPromt"
+                    android:maxLines="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/birth_date"
+                    android:textSize="26sp"
+                    android:textColor="#000000"
+                    android:id="@+id/birthDatePromt"
+                    android:layout_below="@id/nameTextPromt"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="28.02.1996"
+                    android:textSize="22sp"
+                    android:textColor="#000000"
+                    android:id="@+id/datePickText"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/birthDatePromt"
+                    android:layout_alignTop="@id/breedTextPromt"
+                    android:layout_alignBottom="@id/breedTextPromt"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mother"
+                    android:textSize="26sp"
+                    android:textColor="#000000"
+                    android:id="@+id/motherTextPromt"
+                    android:layout_below="@id/birthDatePromt"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/motherSpinner"
+                    android:layout_toRightOf="@id/motherTextPromt"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/father"
+                    android:textSize="26sp"
+                    android:textColor="#000000"
+                    android:id="@+id/fatherTextPromt"
+                    android:layout_below="@id/motherTextPromt"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/fatherSpinner" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/breed"
+                    android:textSize="26sp"
+                    android:textColor="#000000"
+                    android:id="@+id/breedTextPromt"
+                    android:layout_below="@id/fatherTextPromt"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/breedSpinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/color"
+                    android:textSize="26sp"
+                    android:textColor="#000000"
+                    android:id="@+id/colorTextPromt"
+                    android:layout_below="@id/breedTextPromt"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/colorSpinner" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f1f1f1"
+                android:id="@+id/divider"
+                android:layout_below="@id/colorTextPromt"/>
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_below="@id/divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_marginRight="16dp">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_data"
+                    android:id="@+id/addData"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saveButton"
+                    android:text="@string/save"
+                    style="@style/Base.Widget.AppCompat.Button.Colored"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+</ScrollView>
